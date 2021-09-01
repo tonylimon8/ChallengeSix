@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Coding Quiz</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../Develop/css/styles.css" />
+  </head>
+  
+  <body>
+    <div class="scores"><a href="../Develop/highscores.html">View Highscores</a></div>
+
+    <div class="timer" style="color: red;">Time: <span id="time"></span> </div>
+    <div class="wrapper">
+      <div id="start-screen" class="start">
+        <h1>Coding Quiz Challenge</h1>
+        <p>
+          Try to answer the following code-related questions within the time
+          limit. Keep in mind that incorrect answers will penalize your
+          score/time by ten seconds!
+        </p>
+        <button id="start">Start Quiz</button>
+      </div>
+
+      <div id="questions" class="hide">
+        <h2 id="question-title"></h2>
+        <div id="choices" class="choices">
+          <button id="a" onclick="checkABCD('a')"></button>
+          <button id="b" onclick="checkABCD('b')"></button>
+          <button id="c" onclick="checkABCD('c')"></button>
+          <button id="d" onclick="checkABCD('d')"></button>
+        </div>
+      </div>
+
+      <div id="end-screen" class="hide">
+        <h2>All done!</h2>
+        <p>Your final score is <span id="final-score"></span>.</p>
+        <p>
+          Enter initials: <input type="text" id="initials" max="3" />
+          <button id="send" onclick="saveScore()">Send</button>
+        </p>
+      </div>
+
+      <div id="feedback" class="feedback hide"></div>
+    </div>
+    
+    <script src="../Develop/assets/js/logic.js"></script>
+   <script src="../Develop/assets/js/questions.js"></script>
+  </body>
+</html>
